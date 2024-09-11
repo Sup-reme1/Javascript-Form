@@ -1,0 +1,108 @@
+<!--
+     Create a Form that has a CURD Functionality: 
+     Input fields are:
+        a. Name of initiator
+        b. Cash Amount
+        c. Item of expenses
+        d. Manager Name
+        e. Item count
+        f. Purchase Date
+        g. Employee ID
+        h. Description
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exec Assignment</title>
+
+    
+</head>
+<body>
+    
+    <form>
+        <h1>Add Record</h1>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" id="amount">
+        </div>
+        <div>
+            <label for="item">Expenses Item</label>
+            <input type="text" name="item" id="item">
+        </div>
+        <div>
+            <label for="M-name">Manager Name</label>
+            <input type="text" name="M-name" id="M-name">
+        </div>
+        <div>
+            <label for="count">Item count</label>
+            <input type="text" name="count" id="count">
+        </div>
+        <div>
+            <label for="date">Purchase Date</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <div>
+            <label for="id">Employee ID</label>
+            <input type="text" name="id" id="id">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description">
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <!-- Edit form -->
+    <form id="edit-form" style="display: none;">
+        <h1>Edit Data</h1>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" id="amount">
+        </div>
+        <div>
+            <label for="item">Expenses Item</label>
+            <input type="text" name="item" id="item">
+        </div>
+        <div>
+            <label for="M-name">Manager Name</label>
+            <input type="text" name="M-name" id="M-name">
+        </div>
+        <div>
+            <label for="count">Item count</label>
+            <input type="text" name="count" id="count">
+        </div>
+        <div>
+            <label for="date">Purchase Date</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <div>
+            <label for="id">Employee ID</label>
+            <input type="text" name="id" id="id">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description">
+        </div>
+        <div>
+            <button type="submit">Edit Data</button>
+        </div>
+        <a href="home.html">Check Data</a>
+    </form>
+    <h1 id="show-text"></h1>
+    <script src="main.js"></script>
+</body>
+</html>
