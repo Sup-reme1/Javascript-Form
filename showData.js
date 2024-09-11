@@ -34,7 +34,7 @@ const deleteData = (id) => {
 
 
 if (storage.length === 0){
-    document.querySelector('body').innerHTML = 'No Data in Local Storage';
+    document.querySelector('body').innerHTML = 'No Data in Local Storage <br> <a href="index.html">Add Record</a>';
 } else{
     // document.querySelector('body').innerHTML = 'Data in Local Storage is processing';
     storage.forEach(data => {

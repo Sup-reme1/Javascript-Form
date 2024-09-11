@@ -49,18 +49,23 @@ form.addEventListener('submit', (e) =>{
     // const name = ;
     // const amount = ;
     // const item = ;
-    // const mName = form['M-name'].value;
-    // const count = form['count'].value;
-    // const date = form['date'].value;
-    // const eId = form['id'].value;
-    // const description = form['description'].value;
+    // const mName = ;
+    // const count = ;
+    // const date = ;
+    // const eId = ;
+    // const description = ;
 
     
     const formData = {
         id: getId(),
         name: form['name'].value,
         amount: form['amount'].value,
-        item: form['item'].value
+        item: form['item'].value,
+        managerName: form['M-name'].value,
+        count: form['count'].value,
+        date: form['date'].value,
+        empId: form['id'].value,
+        description: form['description'].value
     }        
 
     storage.push(formData);
@@ -69,6 +74,11 @@ form.addEventListener('submit', (e) =>{
     form['name'].value = '';
     form['amount'].value = '';
     form['item'].value = '';
+    form['M-name'].value = '';
+    form['count'].value = '';
+    form['date'].value = '';
+    form['id'].value = '';
+    form['description'].value = '';
 
     window.location.href = 'home.html';
 })
@@ -78,10 +88,15 @@ form.addEventListener('submit', (e) =>{
 // Functions
 function updateForm(id){
     let index = storage.findIndex(data => data.id === id);
-    console.log(index);
+
     editForm['name'].value = storage[index].name;
     editForm['amount'].value = storage[index].amount;
     editForm['item'].value = storage[index].item;
+    editForm['M-name'].value = storage[index].item;
+    editForm['count'].value = storage[index].item;
+    editForm['date'].value = storage[index].item;
+    editForm['id'].value = storage[index].item;
+    editForm['description'].value = storage[index].item;
 }
 
 
