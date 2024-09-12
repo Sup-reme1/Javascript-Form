@@ -19,43 +19,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exec Assignment</title>
 
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <form>
+    <form action="submit">
         <h1>Add Record</h1>
         <div>
             <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" required>
         </div>
         <div>
             <label for="amount">Amount</label>
-            <input type="number" name="amount" id="amount">
+            <input type="number" name="amount" id="amount" required>
         </div>
         <div>
             <label for="item">Expenses Item</label>
-            <input type="text" name="item" id="item">
+            <input type="text" name="item" id="item" required>
         </div>
         <div>
-            <label for="M-name">Manager Name</label>
-            <input type="text" name="M-name" id="M-name">
+            <label for="Mname">Manager Name</label>
+            <input type="text" name="Mname" id="Mname" required>
         </div>
         <div>
             <label for="count">Item count</label>
-            <input type="text" name="count" id="count">
+            <input type="text" name="count" id="count" required>
         </div>
         <div>
             <label for="date">Purchase Date</label>
-            <input type="date" name="date" id="date">
+            <input type="date" name="date" id="date" required>
         </div>
         <div>
             <label for="id">Employee ID</label>
-            <input type="text" name="id" id="id">
+            <input type="text" name="id" id="id" required>
         </div>
         <div>
             <label for="description">Description</label>
-            <input type="text" name="description" id="description">
+            <input type="text" name="description" id="description" required>
         </div>
         <div>
             <button type="submit">Submit</button>
@@ -63,39 +63,39 @@
     </form>
 
     <!-- Edit form -->
-    <form id="edit-form" style="display: none;">
+    <form action="submit" id="edit-form" style="display: none;">
         <h1>Edit Data</h1>
         <div>
             <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" required>
         </div>
         <div>
             <label for="amount">Amount</label>
-            <input type="number" name="amount" id="amount">
+            <input type="number" name="amount" id="amount" required>
         </div>
         <div>
             <label for="item">Expenses Item</label>
-            <input type="text" name="item" id="item">
+            <input type="text" name="item" id="item" required>
         </div>
         <div>
-            <label for="M-name">Manager Name</label>
-            <input type="text" name="M-name" id="M-name">
+            <label for="Mname">Manager Name</label>
+            <input type="text" name="Mname" id="Mname" required>
         </div>
         <div>
             <label for="count">Item count</label>
-            <input type="text" name="count" id="count">
+            <input type="text" name="count" id="count" required>
         </div>
         <div>
             <label for="date">Purchase Date</label>
-            <input type="date" name="date" id="date">
+            <input type="date" name="date" id="date" required>
         </div>
         <div>
             <label for="id">Employee ID</label>
-            <input type="text" name="id" id="id">
+            <input type="text" name="id" id="id" required>
         </div>
         <div>
             <label for="description">Description</label>
-            <input type="text" name="description" id="description">
+            <input type="text" name="description" id="description" required>
         </div>
         <div>
             <button type="submit">Edit Data</button>
