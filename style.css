@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat;
+    margin-top: 20px;
+    padding: 0 20px;
+    /* text-align: center; */
+    font-size: 16px;
+}
+
+form{
+    box-shadow: 0 0 1px 0 rgba(0,0,0, .5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form h1{
+    text-align: center;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    color: gray;
+    font-size: .8em;
+}
+
+form label{
+    margin-bottom: 5px;
+}
+
+form input{
+    padding: 5px 5px;
+}
+
+form button{
+    padding: 5px 0;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+form button:hover{
+    background-color: gray;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: .8em;
+    padding: 1px 3px;
+    background-color: rgba(229, 229, 229, 0.524);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+table{
+    
+    border-collapse: collapse;
+    margin-top: 10px;
+    width: 100%;
+    font-size: .8em;
+    border: 0;
+    /* border-radius: 100px; */
+    box-shadow: 0 0 .5px 0 rgba(0,0,0, .5);
+}
+
+thead th{
+    padding: 5px;
+}
+
+tbody td{
+    padding: 5px;
+    text-align: center;
+}
+
+table a{
+    background-color: rgba(197, 194, 194, 0.183);
+    padding: 5px 10px;
+    /* padding: 0; */
+}
