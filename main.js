@@ -27,38 +27,51 @@ const getIndex = (id)=>{
 editForm.addEventListener('submit', e=>{
     e.preventDefault();
 
-    const formData = {
-        id: id,
-        name: editForm['name'].value,
-        amount: editForm['amount'].value,
-        item: editForm['item'].value,
-        Mname: form['Mname'].value,
-        count: form['count'].value,
-        date: form['date'].value,
-        empId: form['id'].value,
-        description: form['description'].value
-    }      
     
-    storage[getIndex(id)] = formData;
-    localStorage.setItem('data', JSON.stringify(storage));
+    if (validateForm(editForm)){   
+        const formData = {
+            id: id,
+            name: editForm['name'].value,
+            amount: editForm['amount'].value,
+            item: editForm['item'].value,
+            Mname: editForm['Mname'].value,
+            count: editForm['count'].value,
+            date: editForm['date'].value,
+            empId: editForm['empId'].value,
+            description: editForm['description'].value
+        }       
+        
+        console.log(formData);
+        console.log(getIndex(id));
+        
+        storage[getIndex(id)] = formData;
+        localStorage.setItem('data', JSON.stringify(storage));
 
-    form['name'].value = '';
-    form['amount'].value = '';
-    form['item'].value = '';
-    form['Mname'].value = '';
-    form['count'].value = '';
-    form['date'].value = '';
-    form['id'].value = '';
-    form['description'].value = '';
 
-    window.location.href = 'home.html';
+        editForm['name'].value = '';
+        editForm['amount'].value = '';
+        editForm['item'].value = '';
+        editForm['Mname'].value = '';
+        editForm['count'].value = '';
+        editForm['date'].value = '';
+        editForm['empId'].value = '';
+        editForm['description'].value = '';
+
+        window.location.href = 'home.html';
+
+    } else{
+        alert('Fill the form');
+    }
+
+   
+
 })
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
 
 
-    if (validateForm()){
+    if (validateForm(form)){
         const formData = {
             id: getId(),
             name: form['name'].value,
@@ -67,7 +80,7 @@ form.addEventListener('submit', (e) =>{
             Mname: form['Mname'].value,
             count: form['count'].value,
             date: form['date'].value,
-            empId: form['id'].value,
+            empId: form['empId'].value,
             description: form['description'].value
         }        
         
@@ -81,7 +94,7 @@ form.addEventListener('submit', (e) =>{
         form['Mname'].value = '';
         form['count'].value = '';
         form['date'].value = '';
-        form['id'].value = '';
+        form['empId'].value = '';
         form['description'].value = '';
 
         window.location.href = 'home.html';
@@ -96,12 +109,13 @@ form.addEventListener('submit', (e) =>{
 
 
 // Functions
-function validateForm(){
+function validateForm(form){
+    console.log(editForm.name.value, editForm.item.value, editForm.Mname.value, editForm.empId.value, editForm.description.value);
     if (
         form.name.value === null || form.name.value.trim() === '' ||
         form.item.value === null || form.item.value.trim() === '' ||
         form.Mname.value === null || form.Mname.value.trim() === '' ||
-        form.id.value === null || form.id.value.trim() === '' ||
+        form.empId.value === null || form.empId.value.trim() === '' ||
         form.description.value === null || form.description.value.trim() === ''
     ){ return false; } else{
         return true;
@@ -113,13 +127,15 @@ function validateForm(){
 function updateForm(id){
     let index = storage.findIndex(data => data.id === id);
 
+    console.log(storage[index]);
+
     editForm['name'].value = storage[index].name;
     editForm['amount'].value = storage[index].amount;
     editForm['item'].value = storage[index].item;
     editForm['Mname'].value = storage[index].Mname;
     editForm['count'].value = storage[index].count;
     editForm['date'].value = storage[index].date;
-    editForm['id'].value = storage[index].empId;
+    editForm['empId'].value = storage[index].empId;
     editForm['description'].value = storage[index].description;
 }
 
