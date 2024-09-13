@@ -17,11 +17,12 @@ const createTableElement = (data)=>{
     name.innerHTML = data.name;
     amount.innerHTML = data.amount;
     expensesItem.innerHTML = data.item;
+    managerName.innerHTML = data.Mname;
     delBtn.innerHTML = `<a href="home.html" id="${data.id}" onclick="deleteData(this.id)">Delete Data</a>`
     editBtn.innerHTML = `<a href="index.html?id=${data.id}">Edit Data</a>`
     
 
-    tRow.append(name, amount, expensesItem, editBtn, delBtn);
+    tRow.append(name, amount, expensesItem, managerName, editBtn, delBtn);
     tbody.appendChild(tRow);
 }
 
@@ -37,10 +38,5 @@ if (storage.length === 0){
     document.querySelector('#title').innerHTML = 'No Data in Local Storage';
     document.querySelector('table').style.display = 'none';
 } else{
-    // document.querySelector('body').innerHTML = 'Data in Local Storage is processing';
-    storage.forEach(data => {
-        createTableElement(data);
-    });
-    
-    
+    storage.forEach(createTableElement);
 }

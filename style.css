@@ -14,8 +14,10 @@ body{
 
 form{
     box-shadow: 0 0 1px 0 rgba(0,0,0, .5);
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 form h1{
@@ -25,11 +27,12 @@ form h1{
 form div{
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin-bottom: 10px;
-    padding: 5px 0;
+    width: 100%;
+    margin-bottom: 10px 20px;
+    padding: 5px 20px;
     color: gray;
     font-size: .8em;
+    /* box-sizing: border-box; */
 }
 
 form label{
@@ -63,14 +66,13 @@ a{
 }
 
 table{
-    
     border-collapse: collapse;
     margin-top: 10px;
     width: 100%;
     font-size: .8em;
     border: 0;
-    /* border-radius: 100px; */
     box-shadow: 0 0 .5px 0 rgba(0,0,0, .5);
+    text-wrap: nowrap;
 }
 
 thead th{
@@ -80,6 +82,7 @@ thead th{
 tbody td{
     padding: 5px;
     text-align: center;
+    
 }
 
 table a{
